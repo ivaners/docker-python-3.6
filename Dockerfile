@@ -7,9 +7,11 @@ RUN apt-get update \
         python-opencv \
         python-numpy \
         libzbar-dev \
+        tesseract-ocr \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install opencv-python
 RUN pip install pyzbar
 RUN pip install PyMySQL
 RUN pip install redis
+RUN pip install pytesseract
